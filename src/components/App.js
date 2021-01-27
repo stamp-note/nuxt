@@ -12,7 +12,11 @@ function App() {
           displayName: user.displayName,
           uid: user.uid,
           updateProfile: (args) => user.updateProfile(args),
+          // firebase의 특정부분만 가져와서 react한테 전달해줌
         });
+      } else {
+        setUserObj(null);
+        // 로그아웃
       }
       setInit(true);
     });
