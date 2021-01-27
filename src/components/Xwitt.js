@@ -1,4 +1,4 @@
-import { dbService } from "fbManager";
+import { dbService, storageService } from "fbManager";
 import React, { useState } from "react";
 
 const Xwitt = ({ xwittObj, isOwner }) => {
@@ -8,6 +8,7 @@ const Xwitt = ({ xwittObj, isOwner }) => {
     const ok = window.confirm("Are you sure you want to delete this xwitt?");
     if (ok) {
       await dbService.doc(`xwitts/${xwittObj.id}`).delete();
+      await storageService.refFromURL(xwittObj.attachmentUrl).delete();
     }
   };
 
@@ -49,6 +50,9 @@ const Xwitt = ({ xwittObj, isOwner }) => {
       ) : (
         <>
           <p>{xwittObj.text}</p>
+          {xwittObj.attachmentUrl && (
+            <img src={xwittObj.attachmentUrl} width="50px" height="50px" />
+          )}
           {isOwner && (
             <>
               <button onClick={onDelete}>Delete</button>
