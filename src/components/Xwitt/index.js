@@ -41,7 +41,7 @@ const Xwitt = ({ xwittObj, isOwner }) => {
     const { value } = e.target;
     setNewXwitt(value);
   };
-  console.log(xwittObj);
+
   return (
     <XwitterWrap>
       <XwitterTopBar />
@@ -60,6 +60,7 @@ const Xwitt = ({ xwittObj, isOwner }) => {
                 <XwitterEditButtonWrap>
                   <XwitterEditButton
                     onClick={toggleEditing}
+                    type="button"
                     value="Cancel"
                     cancel
                   />

@@ -171,11 +171,16 @@ const GlobalStyles = createGlobalStyle`
 
 export const MainBtnDefault = css`
   display: inline-block;
-  width: 50px;
   text-align: center;
   border-radius: var(--border-radius);
   background: var(--color-point);
-  padding: 5px 0;
+  padding: 5px 10px;
+`;
+
+export const MainBoxDefault = css`
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-point);
+  box-shadow: var(--box-shadow);
 `;
 
 export default GlobalStyles;

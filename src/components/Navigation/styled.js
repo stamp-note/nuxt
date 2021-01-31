@@ -33,5 +33,10 @@ export const Greetings = styled.h2`
   font-size: 50px;
   text-align: center;
   -webkit-text-stroke: 2px var(--color-main);
-  padding: var(--spacing) 0 var(--spacing);
+  padding: var(--spacing) 0;
+
+  @media ${(props) => props.theme.mobileM} {
+    font-size: 40px;
+    padding: 10px 0 var(--spacing);
+  }
 `;

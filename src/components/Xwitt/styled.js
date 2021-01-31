@@ -29,6 +29,10 @@ export const XwitterEditText = styled.textarea`
   height: 80px;
   background: #f0f0f0;
   padding: 10px;
+
+  @media ${(props) => props.theme.mobileS} {
+    height: 140px;
+  }
 `;
 
 export const XwitterEditButtonWrap = styled.div`
@@ -39,7 +43,6 @@ export const XwitterEditButtonWrap = styled.div`
 
 export const XwitterEditButton = styled.input`
   ${MainBtnDefault}
-  width: 60px;
   cursor: pointer;
 
   ${(props) =>
@@ -53,7 +56,7 @@ export const XwitterEditButton = styled.input`
   }
 `;
 
-export const XwitterText = styled.p`
+export const XwitterText = styled.div`
   line-height: 1.4em;
   padding: var(--spacing) 30px;
 `;
@@ -86,7 +89,7 @@ export const XwitterIcon = styled.span`
   background: ${(props) => (props.delete ? "#ED6A5E" : "#61C454")};
 `;
 
-export const XwitterImgWrap = styled.figure`
+export const XwitterImgWrap = styled.p`
   position: relative;
   width: 100%;
   overflow: hidden;

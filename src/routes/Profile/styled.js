@@ -1,11 +1,14 @@
 import styled from "styled-components";
-import { MainBtnDefault } from "style/GlobalStyles";
+import { MainBtnDefault, MainBoxDefault } from "style/GlobalStyles";
 
 export const ProfileWrap = styled.div`
-  border-radius: var(--border-radius);
-  border: 1px solid var(--color-point);
-  box-shadow: var(--box-shadow);
+  ${MainBoxDefault}
+
   padding: var(--spacing-wrap);
+
+  @media ${(props) => props.theme.mobileM} {
+    padding: var(--spacing-wrap) var(--spacing);
+  }
 `;
 
 export const ProfileNickInput = styled.input`

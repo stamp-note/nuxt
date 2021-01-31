@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { MainBtnDefault } from "style/GlobalStyles";
+import { MainBtnDefault, MainBoxDefault } from "style/GlobalStyles";
 
 export const XwitterFatoryForm = styled.form`
+  ${MainBoxDefault}
+
   display: block;
-  border: 1px solid var(--color-main);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
   padding: var(--spacing);
   padding-bottom: 15px;
 `;
@@ -31,6 +30,10 @@ export const XwitterTextInput = styled.textarea`
 
   &::placeholder {
     color: #777;
+  }
+
+  @media ${(props) => props.theme.mobileS} {
+    height: 140px;
   }
 `;
 
@@ -87,5 +90,4 @@ export const AttachmentInput = styled.input`
 
 export const XwitterSave = styled.input`
   ${MainBtnDefault}
-  width: 50px;
 `;

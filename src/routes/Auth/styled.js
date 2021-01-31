@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MainBoxDefault } from "style/GlobalStyles";
 
 export const AuthWrap = styled.div`
   display: flex;
@@ -11,15 +12,16 @@ export const AuthWrap = styled.div`
 export const AuthContainer = styled.div`
   width: 100%;
   max-width: 480px;
-  border: 1px solid var(--color-main);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  ${MainBoxDefault}
   padding: var(--spacing-wrap);
+
+  @media ${(props) => props.theme.mobileM} {
+    padding: var(--spacing);
+  }
 `;
 
 export const LogoWrap = styled.h1`
   font-size: 50px;
   color: var(--color-main);
   text-align: center;
-  margin-bottom: var(--spacing);
 `;

@@ -104,7 +104,7 @@ const XwitterFatory = ({ userObj }) => {
       </XwitterTextInputWrap>
 
       <FormBottomWrap>
-        <AttachmentLabel for="add-photo">
+        <AttachmentLabel htmlFor="add-photo">
           <FontAwesomeIcon icon={faImage} />
         </AttachmentLabel>
         <AttachmentInput

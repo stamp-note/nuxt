@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AppWrap = styled.div`
-  width: 94%;
+  width: 90%;
   max-width: 500px;
   margin: 0 auto;
 `;
