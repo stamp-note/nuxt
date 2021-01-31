@@ -21,5 +21,5 @@ export const LogoWrap = styled.h1`
   font-size: 50px;
   color: var(--color-main);
   text-align: center;
-  margin-bottom: var(--spacing));
+  margin-bottom: var(--spacing);
 `;

@@ -52,7 +52,7 @@ function App() {
           </LoadingWrap>
         )}
 
-        <Footer>&copy; {new Date().getFullYear()} Xwitter</Footer>
+        <Footer>&copy; 2021 Xwitter</Footer>
       </AppWrap>
     </>
   );

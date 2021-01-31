@@ -61,7 +61,8 @@ const errorShake = keyframes`
 
 export const ErrorDesc = styled.p`
   width: 100%;
-  height: 25px;
+  min-height: 25px;
+  line-height: 1.2em;
   color: var(--color-point);
   text-align: center;
   padding-top: 10px;
