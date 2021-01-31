@@ -1,6 +1,20 @@
-import { dbService, storageService } from "fbManager";
 import React, { useState } from "react";
-import { XwitterEditForm, XwitterWrap } from "./styled";
+import { dbService, storageService } from "fbManager";
+import {
+  XwitterButton,
+  XwitterEditForm,
+  XwitterIcon,
+  XwitterTopBar,
+  XwitterImg,
+  XwitterImgWrap,
+  XwitterText,
+  XwitterWrap,
+  XwitterIconWrap,
+  XwitterEditText,
+  XwitterEditWrap,
+  XwitterEditButtonWrap,
+  XwitterEditButton,
+} from "./styled";
 
 const Xwitt = ({ xwittObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
@@ -27,44 +41,57 @@ const Xwitt = ({ xwittObj, isOwner }) => {
     const { value } = e.target;
     setNewXwitt(value);
   };
-
+  console.log(xwittObj);
   return (
     <XwitterWrap>
+      <XwitterTopBar />
       {editing ? (
-        <>
+        <XwitterEditWrap>
           {isOwner && (
             <>
               <XwitterEditForm onSubmit={onEditingSubmit}>
-                <input
+                <XwitterEditText
                   type="text"
                   placeholder="Edit your Xwitt"
                   onChange={onEditing}
                   value={newXwitt}
                   required
                 />
-                <input type="submit" value="Update" />
+                <XwitterEditButtonWrap>
+                  <XwitterEditButton
+                    onClick={toggleEditing}
+                    value="Cancel"
+                    cancel
+                  />
+                  <XwitterEditButton type="submit" value="Update" />
+                </XwitterEditButtonWrap>
               </XwitterEditForm>
-              <button onClick={toggleEditing}>Cancel</button>
             </>
           )}
-        </>
+        </XwitterEditWrap>
       ) : (
         <>
-          <p>{xwittObj.text}</p>
-          {xwittObj.attachmentUrl && (
-            <img
-              src={xwittObj.attachmentUrl}
-              width="50px"
-              height="50px"
-              alt="img"
-            />
-          )}
-          {isOwner && (
-            <>
-              <button onClick={onDelete}>Delete</button>
-              <button onClick={toggleEditing}>Edit</button>
-            </>
-          )}
+          <XwitterIconWrap>
+            {isOwner && (
+              <>
+                <XwitterButton onClick={onDelete} title="Delete">
+                  <XwitterIcon delete></XwitterIcon>
+                </XwitterButton>
+                <XwitterButton onClick={toggleEditing} title="Edit">
+                  <XwitterIcon></XwitterIcon>
+                </XwitterButton>
+              </>
+            )}
+          </XwitterIconWrap>
+
+          <XwitterText>
+            {xwittObj.text}
+            {xwittObj.attachmentUrl && (
+              <XwitterImgWrap>
+                <XwitterImg src={xwittObj.attachmentUrl} alt="img" />
+              </XwitterImgWrap>
+            )}
+          </XwitterText>
         </>
       )}
     </XwitterWrap>

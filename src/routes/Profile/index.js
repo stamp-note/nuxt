@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { authService } from "fbManager";
-import { ProfileWrap } from "./styled";
+import {
+  LogoutButton,
+  ProfileNickFin,
+  ProfileNickInput,
+  ProfileWrap,
+} from "./styled";
 
 const Profile = ({ refreshUser, userObj }) => {
   const history = useHistory();
@@ -32,15 +37,15 @@ const Profile = ({ refreshUser, userObj }) => {
   return (
     <ProfileWrap>
       <form onSubmit={onSubmit}>
-        <input
+        <ProfileNickInput
           onChange={onChange}
           value={newDisplayName}
           type="text"
-          placeholder="Display Name"
+          placeholder="너의 닉네임은요?"
         />
-        <input type="submit" placeholder="Update" />
+        <ProfileNickFin type="submit" placeholder="Update" value="결정완료" />
       </form>
-      <button onClick={onLogOutClick}>Logout</button>
+      <LogoutButton onClick={onLogOutClick}>Logout</LogoutButton>
     </ProfileWrap>
   );
 };

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MainBtnDefault } from "style/GlobalStyles";
 
 export const XwitterFatoryForm = styled.form`
   display: block;
@@ -20,10 +21,12 @@ export const XwitterTextInput = styled.textarea`
   display: block;
   width: 100%;
   height: 80px;
+  line-height: 1.4em;
   caret-color: var(--color-point);
   color: #fff;
   outline: none;
   overflow-y: scroll;
+  padding-right: 5px;
   margin-bottom: var(--spacing);
 
   &::placeholder {
@@ -76,8 +79,6 @@ export const AttachmentLabel = styled.label`
   font-size: 26px;
   color: var(--color-point);
   cursor: pointer;
-
-  svg
 `;
 
 export const AttachmentInput = styled.input`
@@ -85,11 +86,6 @@ export const AttachmentInput = styled.input`
 `;
 
 export const XwitterSave = styled.input`
-  display: inline-block;
+  ${MainBtnDefault}
   width: 50px;
-  color: var(--color-background);
-  text-align: center;
-  border-radius: var(--border-radius);
-  background: var(--color-point);
-  padding: 5px 0;
 `;

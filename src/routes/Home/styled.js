@@ -7,3 +7,5 @@ export const HomeWrap = styled.div`
 export const XwitterBox = styled.div`
   padding-top: var(--spacing-wrap);
 `;
+
+export const WriteButton = styled.button``;

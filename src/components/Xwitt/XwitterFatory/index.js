@@ -85,7 +85,7 @@ const XwitterFatory = ({ userObj }) => {
           onChange={onChange}
           value={xwitt}
           type="text"
-          placeholder="Tell me. What's on your mind?"
+          placeholder="내가 최근 봤던 책에 나오는 여주들은 남들이 봤을때 사소한 것들로 인생을 굉장히 행복하게 살고 있었어. 행복을 대단하지 않게 생각해보면 우리는 좀 더 행복하게 살 수 있지 않을까"
           maxLength={textMaxLength}
         />
 

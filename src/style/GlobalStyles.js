@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 import { reset } from "styled-reset";
 
 const GlobalStyles = createGlobalStyle`
@@ -9,12 +9,15 @@ const GlobalStyles = createGlobalStyle`
     --color-sub: #6b9ad6;
     --color-point: #76cfff;
     --color-background: #0f1323;
+    --color-placeholder: #999;
     --box-shadow:0px 0px 20px 10px rgba(72, 168, 246, 0.1);
     --letter-spacing: .1em;
     --line-height: 1.2em;
     --spacing: 20px;
     --spacing-wrap: 40px;
     --border-radius: 5px;
+    --btn-gradient: linear-gradient(90deg, #604398, #218c82);
+    
   }
 
   * {
@@ -164,6 +167,15 @@ const GlobalStyles = createGlobalStyle`
         display: block;
     }
 
+`;
+
+export const MainBtnDefault = css`
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  border-radius: var(--border-radius);
+  background: var(--color-point);
+  padding: 5px 0;
 `;
 
 export default GlobalStyles;

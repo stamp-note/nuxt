@@ -12,7 +12,7 @@ export const AuthFormInput = styled.input`
   padding: 10px;
 
   &::placeholder {
-    color: #999;
+    color: var(--color-placeholder);
   }
 
   & + & {
@@ -22,7 +22,7 @@ export const AuthFormInput = styled.input`
     props.button &&
     css`
       color: #fff;
-      background-image: linear-gradient(90deg, #604398, #218c82);
+      background-image: var(--btn-gradient);
     `}
 `;
 

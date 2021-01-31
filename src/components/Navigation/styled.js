@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  padding: var(--spacing) 0;
+  padding: var(--spacing-wrap) 0 var(--spacing);
 `;
 
 export const NavWrap = styled.ul`
@@ -27,4 +27,11 @@ export const NavIcon = styled.div`
 
 export const NavTitle = styled.div`
   margin-top: 5px;
+`;
+
+export const Greetings = styled.h2`
+  font-size: 50px;
+  text-align: center;
+  -webkit-text-stroke: 2px var(--color-main);
+  padding: var(--spacing) 0 var(--spacing);
 `;
