@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import AppRouter from "components/Router";
 import { authService } from "fbManager";
+import GlobalStyles from "style/GlobalStyles";
+import { AppWrap, LoadingText, LoadingWrap, Footer } from "./styled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [init, setInit] = useState(false);
@@ -33,17 +37,23 @@ function App() {
 
   return (
     <>
-      {init ? (
-        <AppRouter
-          refreshUser={refreshUser}
-          isLoggedIn={Boolean(userObj)}
-          userObj={userObj}
-        />
-      ) : (
-        "initializing..."
-      )}
+      <GlobalStyles />
+      <AppWrap>
+        {init ? (
+          <AppRouter
+            refreshUser={refreshUser}
+            isLoggedIn={Boolean(userObj)}
+            userObj={userObj}
+          />
+        ) : (
+          <LoadingWrap>
+            <FontAwesomeIcon icon={faSpinner} spin />
+            <LoadingText>initializing...</LoadingText>
+          </LoadingWrap>
+        )}
 
-      <footer>&copy; {new Date().getFullYear()} Xwitter</footer>
+        <Footer>&copy; {new Date().getFullYear()} Xwitter</Footer>
+      </AppWrap>
     </>
   );
 }

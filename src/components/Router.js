@@ -1,9 +1,9 @@
 import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "routes/Home";
-import Auth from "routes/Auth";
-import Profile from "routes/Profile";
-import Navigation from "components/Navigation";
+import Home from "routes/Home/index";
+import Auth from "routes/Auth/index";
+import Profile from "routes/Profile/index";
+import Navigation from "components/Navigation/index";
 
 const AppRouter = ({ refreshUser, isLoggedIn, userObj }) => {
   return (

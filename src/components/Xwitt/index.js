@@ -1,5 +1,6 @@
 import { dbService, storageService } from "fbManager";
 import React, { useState } from "react";
+import { XwitterEditForm, XwitterWrap } from "./styled";
 
 const Xwitt = ({ xwittObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
@@ -28,12 +29,12 @@ const Xwitt = ({ xwittObj, isOwner }) => {
   };
 
   return (
-    <div>
+    <XwitterWrap>
       {editing ? (
         <>
           {isOwner && (
             <>
-              <form onSubmit={onEditingSubmit}>
+              <XwitterEditForm onSubmit={onEditingSubmit}>
                 <input
                   type="text"
                   placeholder="Edit your Xwitt"
@@ -42,7 +43,7 @@ const Xwitt = ({ xwittObj, isOwner }) => {
                   required
                 />
                 <input type="submit" value="Update" />
-              </form>
+              </XwitterEditForm>
               <button onClick={toggleEditing}>Cancel</button>
             </>
           )}
@@ -51,7 +52,12 @@ const Xwitt = ({ xwittObj, isOwner }) => {
         <>
           <p>{xwittObj.text}</p>
           {xwittObj.attachmentUrl && (
-            <img src={xwittObj.attachmentUrl} width="50px" height="50px" />
+            <img
+              src={xwittObj.attachmentUrl}
+              width="50px"
+              height="50px"
+              alt="img"
+            />
           )}
           {isOwner && (
             <>
@@ -61,7 +67,7 @@ const Xwitt = ({ xwittObj, isOwner }) => {
           )}
         </>
       )}
-    </div>
+    </XwitterWrap>
   );
 };
 

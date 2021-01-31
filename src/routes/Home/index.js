@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { dbService } from "fbManager";
-import Xwitt from "components/Xwitt";
-import XwittFactory from "components/XwittFactory";
+import Xwitt from "components/Xwitt/index";
+import XwitterFatory from "components/Xwitt/XwitterFatory/index";
+import { HomeWrap, XwitterBox } from "./styled";
 
 const Home = ({ userObj }) => {
   const [xwitts, setXwitts] = useState([]);
@@ -19,16 +20,18 @@ const Home = ({ userObj }) => {
 
   return (
     <>
-      <XwittFactory userObj={userObj} />
-      <div>
-        {xwitts.map((xwitt) => (
-          <Xwitt
-            key={xwitt.id}
-            xwittObj={xwitt}
-            isOwner={xwitt.createId === userObj.uid}
-          />
-        ))}
-      </div>
+      <HomeWrap>
+        <XwitterFatory userObj={userObj} />
+        <XwitterBox>
+          {xwitts.map((xwitt) => (
+            <Xwitt
+              key={xwitt.id}
+              xwittObj={xwitt}
+              isOwner={xwitt.createId === userObj.uid}
+            />
+          ))}
+        </XwitterBox>
+      </HomeWrap>
     </>
   );
 };

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { authService } from "fbManager";
+import { AuthFormInput, AuthFormWrap, AuthToggle, ErrorDesc } from "./styled";
 
 const AuthForm = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +22,7 @@ const AuthForm = () => {
     e.preventDefault();
     try {
       let data;
-      if (newAccount) {
+      if (!newAccount) {
         // create account
         data = await authService.createUserWithEmailAndPassword(
           email,
@@ -33,8 +34,24 @@ const AuthForm = () => {
       }
       console.log(data);
     } catch (error) {
+      shakeText();
       setError(error.message);
+      console.log(errorShake.current);
     }
+  };
+
+  const focuseInput = useRef();
+  useEffect(() => {
+    focuseInput.current.focus();
+  }, []);
+
+  const errorShake = useRef();
+
+  const shakeText = () => {
+    errorShake.current.classList.add("shaking");
+    setTimeout(() => {
+      errorShake.current.classList.remove("shaking");
+    }, 500);
   };
 
   const toggleAccount = () =>
@@ -43,9 +60,10 @@ const AuthForm = () => {
     });
 
   return (
-    <>
+    <AuthFormWrap>
       <form onSubmit={onSubmit}>
-        <input
+        <AuthFormInput
+          ref={focuseInput}
           type="text"
           name="email"
           placeholder="Email"
@@ -53,7 +71,7 @@ const AuthForm = () => {
           value={email}
           required
         />
-        <input
+        <AuthFormInput
           type="password"
           name="password"
           placeholder="Password"
@@ -61,13 +79,22 @@ const AuthForm = () => {
           value={password}
           required
         />
-        <input type="submit" value={newAccount ? "Create Account" : "Login"} />
-        {error}
+
+        <AuthFormInput
+          type="submit"
+          value={newAccount ? "Login" : "Create Account"}
+          button
+        />
+        <ErrorDesc>
+          <span ref={errorShake}>{error}</span>
+        </ErrorDesc>
       </form>
-      <span onClick={toggleAccount}>
-        {newAccount ? "Sign In" : "Create Account"}
-      </span>
-    </>
+      <AuthToggle>
+        <span onClick={toggleAccount}>
+          {newAccount ? "Create Account" : "Sign In"}
+        </span>
+      </AuthToggle>
+    </AuthFormWrap>
   );
 };
 
