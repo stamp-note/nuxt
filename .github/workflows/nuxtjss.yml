@@ -44,5 +44,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: .output/public # The folder the action should deploy.
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
