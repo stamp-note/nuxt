@@ -9,12 +9,15 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@invictus.codes/nuxt-vuetify": "^0.3.0",
     "@nuxt/devtools": "latest",
     "@types/node": "^18.16.19",
     "nuxt": "^3.6.3",
     "nuxt-typed-router": "^3.2.5"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.4.11"
+    "@pinia/nuxt": "^0.4.11",
+    "sass": "^1.63.6",
+    "vuetify": "^3.3.8"
   }
 }

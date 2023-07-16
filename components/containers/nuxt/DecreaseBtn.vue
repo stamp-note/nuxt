@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-btn
-        @click="increment"
+        @click="decrease"
         color="primary"
     >
       +
@@ -19,8 +19,8 @@ export default {
     }
   },
   methods: {
-    increment() {
-      this.store.increment();
+    decrease() {
+      this.store.decrease();
     },
   },
 }
