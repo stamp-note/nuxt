@@ -34,15 +34,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: yarn
-          cache-dependency-path: './yarn.lock'
       - name: Install dependencies
         run: yarn install
       - name: Static HTML export with Nuxt
         run: yarn run generate
       - name: Deploy
-        uses: JamesIves/github-containers-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-containers # The branch the action should deploy to.
+          branch: gh-pages # The branch the action should deploy to.
           folder: .output/public # The folder the action should deploy.
           token: ${{ secrets.GITHUB_TOKEN }}
