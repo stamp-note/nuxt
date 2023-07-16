@@ -34,12 +34,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: npm
-          cache-dependency-path: './package-lock.json'
+          cache: yarn
+          cache-dependency-path: './yarn.lock'
       - name: Install dependencies
-        run: npm install
+        run: yarn install
       - name: Static HTML export with Nuxt
-        run: npm run generate
+        run: yarn run generate
       - name: Deploy
         uses: JamesIves/github-containers-deploy-action@v4
         with:
