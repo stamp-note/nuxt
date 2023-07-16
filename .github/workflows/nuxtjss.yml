@@ -21,7 +21,7 @@ permissions:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: 'pages'
+  group: 'containers'
   cancel-in-progress: false
 
 jobs:
@@ -41,8 +41,8 @@ jobs:
       - name: Static HTML export with Nuxt
         run: npm run generate
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-containers-deploy-action@v4
         with:
-          branch: gh-pages # The branch the action should deploy to.
+          branch: gh-containers # The branch the action should deploy to.
           folder: .output/public # The folder the action should deploy.
           token: ${{ secrets.GITHUB_TOKEN }}

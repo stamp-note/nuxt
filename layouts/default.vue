@@ -1,5 +1,6 @@
 <template>
   <div>
-    home
+    **Default**
+    <slot />
   </div>
 </template>

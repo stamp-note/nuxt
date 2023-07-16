@@ -11,7 +11,10 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@types/node": "^18.16.19",
-    "nuxt": "^3.6.2",
-    "@nuxt/ui": "^0.4.1"
+    "nuxt": "^3.6.3",
+    "nuxt-typed-router": "^3.2.5"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.11"
   }
 }
