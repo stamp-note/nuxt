@@ -1,6 +1,7 @@
 <template>
   <div>
     nuxt
+    test
     {{count}}
     <ContainersNuxtIncreaseBtn />
   </div>
