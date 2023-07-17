@@ -40,6 +40,11 @@ jobs:
         run: yarn install
       - name: Static HTML export with Nuxt
         run: yarn run generate
+      - name: Replace Router Path
+        run: |
+          rm -rf .output/public/index.html
+          mv .output/public/nuxt/* .output/public/
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
