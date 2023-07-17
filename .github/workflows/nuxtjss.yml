@@ -40,13 +40,9 @@ jobs:
         run: yarn install
       - name: Static HTML export with Nuxt
         run: yarn run generate
-      - name: Deploy1
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: main # The branch the action should deploy to.
-          folder: .output/public/nuxt # The folder the action should deploy.
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Deploy2
+      - name: Replace
+        run: mv .output/public/nuxt/* .output/public/
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages # The branch the action should deploy to.
