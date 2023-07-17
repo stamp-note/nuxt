@@ -44,7 +44,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: main # The branch the action should deploy to.
-          folder: .output/public/_nuxt # The folder the action should deploy.
+          folder: .output/public/nuxt # The folder the action should deploy.
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy2
         uses: JamesIves/github-pages-deploy-action@v4
