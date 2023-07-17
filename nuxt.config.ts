@@ -4,13 +4,7 @@ import path from 'path'
 
 
 export default defineNuxtConfig({
-    ssr: false,
     devtools: {enabled: true},
-    app: {
-        cdnURL: 'https://stamp-note.github.io/nuxt/',
-        buildAssetsDir: './'
-    },
-
     modules: [
         'nuxt-typed-router',
         '@pinia/nuxt',
