@@ -1,6 +1,14 @@
+import path from 'path'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    ssr: false,
     devtools: {enabled: true},
+    nitro: {
+        output: {
+            publicDir: path.join(__dirname, '.output/server'),
+        }
+    },
     modules: [
         'nuxt-typed-router',
         '@pinia/nuxt',
