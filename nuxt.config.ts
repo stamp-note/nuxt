@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     ssr: false,
     devtools: {enabled: true},
     app: {
-        baseURL: 'nuxt',
+        buildAssetsDir: 'nuxt',
     },
 
     modules: [
