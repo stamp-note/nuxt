@@ -1,0 +1,1 @@
+import{u as n,_ as r}from"./IncreaseBtn.dd42fbf6.js";import{_ as s,l as c,v as a,t as u,q as _,k as p}from"./entry.77851877.js";const i={setup(){return{store:n()}},computed:{count(){return this.store.count}}};function d(t,m,l,x,f,e){const o=r;return p(),c("div",null,[a(" nuxt test "+u(e.count)+" ",1),_(o)])}const N=s(i,[["render",d]]);export{N as default};
