@@ -4,11 +4,11 @@ import path from 'path'
 export default defineNuxtConfig({
     ssr: false,
     devtools: {enabled: true},
-    nitro: {
-        output: {
-            publicDir: path.join(__dirname, '.output/server'),
-        }
-    },
+    // nitro: {
+    //     output: {
+    //         publicDir: path.join(__dirname, '.output/server'),
+    //     }
+    // },
     modules: [
         'nuxt-typed-router',
         '@pinia/nuxt',
