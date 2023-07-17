@@ -42,8 +42,9 @@ jobs:
         run: yarn run generate
       - name: Rename file 
         run: |
+          mv .output/public/_nuxt .output/public/_nuxt_temp
           mkdir .output/public/_nuxt/nuxt
-          mv .output/public/_nuxt/* .output/public/_nuxt/nuxt/
+          mv .output/public/_nuxt_temp/* .output/public/_nuxt/nuxt/
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
