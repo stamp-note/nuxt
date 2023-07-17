@@ -5,6 +5,9 @@ import path from 'path'
 
 export default defineNuxtConfig({
     devtools: {enabled: true},
+    app: {
+        buildAssetsDir: 'nuxt'
+    },
     modules: [
         'nuxt-typed-router',
         '@pinia/nuxt',
