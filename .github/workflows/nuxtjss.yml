@@ -40,8 +40,6 @@ jobs:
         run: yarn install
       - name: Static HTML export with Nuxt
         run: yarn run generate
-      - name: Rename nuxt
-        run: mv .output/public/nuxt/_nuxt .output/public/_nuxt
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
