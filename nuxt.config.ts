@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     ssr: false,
     devtools: {enabled: true},
     app: {
-        baseURL: 'https://stamp-note.github.io/nuxt/',
+        buildAssetsDir: './',
     },
 
     modules: [
