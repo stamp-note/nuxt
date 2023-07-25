@@ -1,0 +1,1 @@
+import{_ as t,k as a,l as o,v as n,m as e,an as c}from"./entry.3d41c70e.js";const r={name:"testing"},d={class:"w-100 d-flex"},l={class:"mx-auto"};function i(s,_,f,p,m,u){return a(),o("div",null,[n(" **Testing** "),e("div",d,[e("div",l,[c(s.$slots,"default")])])])}const $=t(r,[["render",i]]);export{$ as default};
