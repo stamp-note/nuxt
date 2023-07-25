@@ -14,6 +14,7 @@
 </template>
 <script>
 import {useStampStore} from "~/stores/stamp";
+import stamp01 from '~/assets/coupons/stamp01.png';
 
 export default {
   setup() {
@@ -25,7 +26,7 @@ export default {
   data(){
     return {
       stamp:{
-        image: '/coupons/stamp01.png',
+        image: stamp01,
       },
     }
   },
@@ -39,5 +40,6 @@ export default {
 <style lang="scss" scoped>
 .stamp-wrap{
   transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 </style>

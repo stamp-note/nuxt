@@ -8,7 +8,11 @@ export default defineNuxtConfig({
     devtools: {enabled: true},
     app: {
         cdnURL: 'https://stamp-note.github.io/nuxt/',
-        buildAssetsDir: './'
+        buildAssetsDir: './',
+    },
+    dir:{
+        public: 'public',
+
     },
 
     modules: [
