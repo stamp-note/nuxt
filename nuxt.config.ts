@@ -15,6 +15,7 @@ export default defineNuxtConfig({
         'nuxt-typed-router',
         '@pinia/nuxt',
         '@invictus.codes/nuxt-vuetify',
+        "nuxt-lodash"
     ],
     vuetify: {
         /* vuetify options */
@@ -32,5 +33,16 @@ export default defineNuxtConfig({
             autoImport: true,
             useVuetifyLabs: true,
         }
-    }
+    },
+    lodash: {
+        prefix: "_",
+        prefixSkip: ["string"],
+        upperAfterPrefix: false,
+        exclude: ["map"],
+        alias: [
+            ["camelCase", "stringToCamelCase"], // => stringToCamelCase
+            ["kebabCase", "stringToKebab"], // => stringToKebab
+            ["isDate", "isLodashDate"], // => _isLodashDate
+        ],
+    },
 })

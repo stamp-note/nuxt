@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
+    "nuxt-lodash": "^2.5.0",
     "sass": "^1.63.6",
     "vuetify": "^3.3.8"
   }
