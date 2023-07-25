@@ -45,4 +45,16 @@ export default defineNuxtConfig({
             ["isDate", "isLodashDate"], // => _isLodashDate
         ],
     },
+    vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    sourceMap: true,
+                    additionalData: `@import '~/style/index.scss';`
+                }
+            }
+        }
+    }
+
 })
+
