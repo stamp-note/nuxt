@@ -1,1 +1,0 @@
-import{_ as t,k as a,l as r,v as n,an as o}from"./entry.3d41c70e.js";const s={};function c(e,l){return a(),r("div",null,[n(" **Default** "),o(e.$slots,"default")])}const _=t(s,[["render",c]]);export{_ as default};
