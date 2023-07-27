@@ -36,11 +36,12 @@
         margin-top: $spacing-xl;
 
         div {
-            margin-top: $spacing-s;
+            margin-top: $spacing-m;
         }
 
         p {
-            font-size: 24px;
+            font-size: $txt-m;
+            word-break: keep-all;
         }
     }
 </style>

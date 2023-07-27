@@ -30,7 +30,7 @@
 
 <style lang="scss" scoped>
     .storeOperHours {
-        margin-top: $spacing-xs;
+        margin-top: $spacing-m;
     }
     .closeDay {
         font-size: 32px;

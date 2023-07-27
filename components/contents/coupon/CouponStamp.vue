@@ -9,8 +9,8 @@
 <style lang="scss" scoped>
     .couponStamp li {
         display: flex;
-        width: 120px;
-        height: 120px;
+        width: 90px;
+        height: 90px;
         font-size: $txt-l;
         font-weight: 800;
         flex-direction: column;

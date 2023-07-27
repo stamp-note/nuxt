@@ -1,16 +1,16 @@
 <template>
     <div>
         <div class="couponWrap">
-            <CouponCustomer />
-            <CouponStamp />
-            <CouponDesc />
+            <ContentsCouponCustomer />
+            <ContentsCouponStamp />
+            <ContentsCouponDesc />
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
     .couponWrap {
-        width: 800;
+        width: 600;
         height: 450px;
         border-radius: 16px;
         background-color: #fff;

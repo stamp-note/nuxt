@@ -1,10 +1,11 @@
 <template>
-  <div>
-    nuxt
+  <div class="mainWrap">
+    <!-- nuxt
     {{count}}
     <ContainersNuxtIncreaseBtn />
-    <ShowTextBtn />
+    <ShowTextBtn /> -->
     <SidebarSideBar />
+    <ContentsCouponWrap />
   </div>
 </template>
 <script>
@@ -24,3 +25,10 @@ export default {
     },
 }
 </script>
+
+<style lang="scss" scoped>
+    .mainWrap {
+        display: flex;
+        width: 100%;
+    }
+</style>

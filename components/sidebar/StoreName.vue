@@ -6,7 +6,7 @@
 
 <style lang="scss" >
     #storeName {
-        font-size: 40px;
+        font-size: $txt-l;
         font-weight: 800;
         margin-bottom: $spacing-xl;
     }
