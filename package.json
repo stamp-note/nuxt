@@ -16,7 +16,9 @@
     "nuxt-typed-router": "^3.2.5"
   },
   "dependencies": {
+    "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
     "@pinia/nuxt": "^0.4.11",
+    "broadcast-channel": "^5.1.0",
     "nuxt-lodash": "^2.5.0",
     "sass": "^1.63.6",
     "vuetify": "^3.3.8"

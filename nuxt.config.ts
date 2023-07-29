@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     modules: [
         'nuxt-typed-router',
         '@pinia/nuxt',
+        '@pinia-plugin-persistedstate/nuxt',
         '@invictus.codes/nuxt-vuetify',
         "nuxt-lodash"
     ],
