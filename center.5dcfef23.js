@@ -1,0 +1,1 @@
+import{_ as s}from"./_plugin-vue_export-helper.c27b6911.js";import{c as o,a as t,K as a,o as c}from"./entry.09d48932.js";const r={},n={class:"d-flex w-100 h-100"},_={class:"ma-auto"};function d(e,l){return c(),o("div",n,[t("div",_,[a(e.$slots,"default")])])}const m=s(r,[["render",d]]);export{m as default};
