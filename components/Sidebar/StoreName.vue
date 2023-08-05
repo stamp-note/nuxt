@@ -1,6 +1,10 @@
+<script setup>
+const storeName = ref("Macko's Cafe에 오신것을 환영합니다.")
+</script>
+
 <template>
     <div>
-        <h1 id="storeName">가나다라마바사아자차카타파하가</h1>
+        <h1 id="storeName">{{ storeName }}</h1>
     </div>
 </template>
 

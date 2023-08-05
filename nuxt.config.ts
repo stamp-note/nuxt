@@ -19,8 +19,9 @@ export default defineNuxtConfig({
         'nuxt-typed-router',
         '@pinia/nuxt',
         '@pinia-plugin-persistedstate/nuxt',
-        '@invictus.codes/nuxt-vuetify',
-        "nuxt-lodash"
+        '@nuxthq/ui',
+        'nuxt-lodash',
+        'nuxt-icon'
     ],
     vuetify: {
         /* vuetify options */

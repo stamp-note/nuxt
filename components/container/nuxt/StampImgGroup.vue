@@ -1,10 +1,9 @@
 <template>
   <template v-for="stampLocation in stampLocationList">
-    <v-img
-        class="position-absolute stamp-wrap"
+    <img
+        class="absolute stamp-wrap"
+        alt="stamp"
         :src="stamp.image"
-        width="50px"
-        contain
         :style="{
             left: stampLocation[0] + 'px',
             top: stampLocation[1] + 'px',
@@ -41,5 +40,6 @@ export default {
 .stamp-wrap{
   transform: translate(-50%, -50%);
   pointer-events: none;
+  width: 50px;
 }
 </style>

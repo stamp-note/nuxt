@@ -1,6 +1,6 @@
 <template>
     <div>
-        <secion>
+        <section>
             <div class="storeBankInfo">
                 <p class="bankName">
                     신한은행
@@ -27,7 +27,7 @@
                     주차는 건물 지하에 하시면 됩니다.
                 </p>
             </div>
-        </secion>
+        </section>
     </div>
 </template>
 

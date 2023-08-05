@@ -1,6 +1,6 @@
 <template>
     <div>
-        <secion>
+        <section>
             <div class="storeOperHours">
                 <p class="operDay">
                     월, 화, 수, 목, 금
@@ -24,7 +24,7 @@
                     연중무휴
                 </p>
             </div>
-        </secion>
+        </section>
     </div>
 </template>
 
