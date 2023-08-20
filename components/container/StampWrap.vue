@@ -6,11 +6,11 @@
   >
     <slot />
     <img
-        class="stamp-stick absolute"
+        class="stamp-stick fixed"
         alt="stamp-stick"
         :style="{
-          top: stickY + 'px',
-          left: stickX + 'px'
+          left: stickX? stickX + 'px': 'auto',
+          top: stickY? stickY + 'px': 'auto',
         }"
         :src="stampStick"
         width="40"

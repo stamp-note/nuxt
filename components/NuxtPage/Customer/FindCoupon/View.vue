@@ -16,13 +16,13 @@ onMounted(() => {
   >
     <div class="m-4 flex flex-col gap-3">
       <div class="flex">
-        <NuxtPageCustomerFindCouponModalSearchInput
+        <NuxtPageCustomerFindCouponSearchInput
         />
       </div>
-      <NuxtPageCustomerFindCouponModalTable
+      <NuxtPageCustomerFindCouponTable
       />
       <div class="flex justify-center">
-        <NuxtPageCustomerFindCouponModalPagination
+        <NuxtPageCustomerFindCouponPagination
         />
       </div>
 

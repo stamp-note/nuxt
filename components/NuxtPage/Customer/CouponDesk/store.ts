@@ -1,9 +1,10 @@
 import {defineStore} from "pinia";
 
-export const useCustomerCouponStore = defineStore({
+export const useCouponDeskStore = defineStore({
     id: 'customer-coupon',
     state: () => ({
         coupon: null,
+        userName: 'John Doe',
     }),
     actions: {
         reset() {
@@ -11,6 +12,9 @@ export const useCustomerCouponStore = defineStore({
         },
         setCoupon(coupon: any) {
             this.coupon = coupon;
+        },
+        setUserName(name: string) {
+            this.userName = name;
         },
         loadCoupon(couponId: number) {
 

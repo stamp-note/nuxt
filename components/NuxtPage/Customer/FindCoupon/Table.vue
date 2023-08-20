@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import {useCustomerStore} from "~/components/NuxtPage/Customer/store";
 import {useUserCouponStore} from "~/stores/user-coupon";
+import {useCouponDeskStore} from "~/components/NuxtPage/Customer/CouponDesk/store";
+import _  from 'lodash';
 
+const couponDeskStore = useCouponDeskStore();
 const customerStore = useCustomerStore();
 const userCouponStore = useUserCouponStore();
 const nuxtApp = useNuxtApp();
@@ -22,7 +25,9 @@ const columns = ref([
 ])
 
 const onSelect = (selectedRow) => {
-
+  const couponCopy = _.cloneDeep(selectedRow.couponList[selectedRow.couponList.length-1]);
+  couponDeskStore.setCoupon(couponCopy);
+  couponDeskStore.setUserName(selectedRow.name);
   customerStore.setViewMode('coupon');
   nuxtApp.$hideModal();
 }
@@ -44,7 +49,7 @@ const onSelect = (selectedRow) => {
         @select="onSelect"
     >
       <template #couponList-data="{row}">
-        <CouponView
+        <DefaultCoupon
             :coupon="row.couponList[row.couponList.length-1]"
             :ui="{
               width: 'w-[200px]'

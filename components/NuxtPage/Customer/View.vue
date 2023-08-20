@@ -10,7 +10,7 @@ const view = computed(() => store.viewMode);
     <NuxtPageCustomerWelcomeView
         v-if="view === 'welcome'"
     />
-    <NuxtPageCustomerCouponView
+    <NuxtPageCustomerCouponDeskView
         v-else
     />
   </div>
