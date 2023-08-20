@@ -24,21 +24,21 @@ export const useUserCouponStore = defineStore({
     }),
 
     actions: {
-        async loadUserCouponList() {
+        async loadUserList() {
             // it can be changed to fetch data from API
-            this.userCouponList = JSON.parse(window.localStorage.getItem("userCouponList")) || [];
+            this.userList = JSON.parse(window.localStorage.getItem("userCouponList")) || [];
         },
-        async saveUserCouponList() {
+        async saveUserList() {
             // it can be changed to fetch data from API
-            window.localStorage.setItem("userCouponList", JSON.stringify(this.userCouponList));
+            window.localStorage.setItem("userCouponList", JSON.stringify(this.userList));
         },
-        async addUserCoupon(userCoupon) {
-            this.userCouponList.push(userCoupon);
-            await this.saveUserCouponList();
+        async addUser(user) {
+            this.userList.push(user);
+            await this.saveUserList();
         },
-        async removeUserCoupon(userCoupon) {
-            this.userCouponList = this.userCouponList.filter((item) => item.id !== userCoupon.id);
-            await this.saveUserCouponList();
+        async removeUser(uId) {
+            this.userList = this.userList.filter((item) => item.uId !== uId);
+            await this.saveUserList();
         }
     }
 })

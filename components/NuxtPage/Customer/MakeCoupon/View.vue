@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import {useUserCouponStore} from "~/stores/user-coupon";
-
-const userCouponStore = useUserCouponStore();
-
 const localSelectedQuestion = ref(null);
+
+
+function reset() {
+  localSelectedQuestion.value = null;
+}
+onMounted(() => {
+  reset();
+})
 
 </script>
 <template>
@@ -47,7 +51,7 @@ const localSelectedQuestion = ref(null);
         />
       </u-form-group>
       <u-input
-        v-if="localSelectedQuestion.value === 'custom'"
+        v-if="localSelectedQuestion?.value === 'custom'"
         size="xl"
         placeholder="질문을 입력해주세요"
       />
