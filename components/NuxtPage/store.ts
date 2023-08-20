@@ -24,10 +24,10 @@ export const useMainStore = defineStore({
             this.saveViewMode();
         },
         loadViewMode() {
-            this.viewMode = localStorage.getItem('viewMode') || 'Customer & Admin';
+            this.viewMode = window.localStorage.getItem('viewMode') || 'Customer & Admin';
         },
         saveViewMode() {
-            localStorage.setItem('viewMode', this.viewMode);
+            window.localStorage.setItem('viewMode', this.viewMode);
         }
     },
 })
