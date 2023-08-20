@@ -1,1 +1,0 @@
-import{_ as s,c as t,a,a3 as o,o as c}from"./entry.5320f269.js";const r={},n={class:"d-flex w-100 h-100"},_={class:"ma-auto"};function d(e,l){return c(),t("div",n,[a("div",_,[o(e.$slots,"default")])])}const i=s(r,[["render",d]]);export{i as default};
