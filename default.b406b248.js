@@ -1,1 +1,0 @@
-import{_ as s,c as t,m as o,o as a}from"./entry.22451f3e.js";const c={},n={class:"min-h-[100vh] dark:bg-[#00000000]"};function r(e,_){return a(),t("main",n,[o(e.$slots,"default")])}const d=s(c,[["render",r]]);export{d as default};
