@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ContainerNuxtStampWrap>
+    <ContainerStampWrap>
       <div class="flex flex-row">
         <div class="basis-full">
 
@@ -16,7 +16,7 @@
           <ContainerNuxtStampPad/>
         </div>
       </div>
-    </ContainerNuxtStampWrap>
+    </ContainerStampWrap>
   </div>
 
 </template>
