@@ -4,33 +4,7 @@ export const useUserCouponStore = defineStore({
     id: "user-coupon",
 
     state: () => ({
-        userList: [
-            {
-                uId: 1,
-                name: "user1",
-                createdAt: new Date(),
-
-                couponList: [{
-                    cId: 1,
-                    identification: {
-                        type: "question",
-                        params: {
-                            question: "question1",
-                            answer: "answer1"
-                        }
-                    },
-                    stamp: {
-                        type: "stamp",
-                        params: {
-                            count: 0,
-                            maxCount: 10,
-                            locations: []
-                        }
-                    },
-                    createdAt: new Date(),
-                }]
-            }
-        ],
+        userList: [],
         page: 1,
         perPage: 3,
         search: ""
@@ -41,6 +15,110 @@ export const useUserCouponStore = defineStore({
         },
         total(){
             return this.searchUserList.length;
+        },
+        defaultUserList() {
+            return [
+                {
+                    uId: 1,
+                    name: "user1",
+                    createdAt: new Date(),
+
+                    couponList: [{
+                        cId: 1,
+                        identification: {
+                            type: "question",
+                            params: {
+                                question: "question1",
+                                answer: "answer1"
+                            }
+                        },
+                        stamp: {
+                            type: "stamp",
+                            params: {
+                                count: 0,
+                                maxCount: 10,
+                                locations: []
+                            }
+                        },
+                        createdAt: new Date(),
+                    }]
+                },
+                {
+                    uId: 2,
+                    name: "user2",
+                    createdAt: new Date(),
+
+                    couponList: [{
+                        cId: 1,
+                        identification: {
+                            type: "question",
+                            params: {
+                                question: "question1",
+                                answer: "answer1"
+                            }
+                        },
+                        stamp: {
+                            type: "stamp",
+                            params: {
+                                count: 0,
+                                maxCount: 10,
+                                locations: []
+                            }
+                        },
+                        createdAt: new Date(),
+                    }]
+                },
+                {
+                    uId: 3,
+                    name: "user3",
+                    createdAt: new Date(),
+
+                    couponList: [{
+                        cId: 1,
+                        identification: {
+                            type: "question",
+                            params: {
+                                question: "question1",
+                                answer: "answer1"
+                            }
+                        },
+                        stamp: {
+                            type: "stamp",
+                            params: {
+                                count: 0,
+                                maxCount: 10,
+                                locations: []
+                            }
+                        },
+                        createdAt: new Date(),
+                    }]
+                },
+                {
+                    uId: 4,
+                    name: "user4",
+                    createdAt: new Date(),
+
+                    couponList: [{
+                        cId: 1,
+                        identification: {
+                            type: "question",
+                            params: {
+                                question: "question1",
+                                answer: "answer1"
+                            }
+                        },
+                        stamp: {
+                            type: "stamp",
+                            params: {
+                                count: 0,
+                                maxCount: 10,
+                                locations: []
+                            }
+                        },
+                        createdAt: new Date(),
+                    }]
+                }
+            ]
         }
     },
     actions: {
@@ -82,12 +160,32 @@ export const useUserCouponStore = defineStore({
                         }
                     },
                     createdAt: new Date(),
+                },{
+                    cId: 1,
+                    identification: {
+                        type: "question",
+                        params: {
+                            question,
+                            answer
+                        },
+
+                    },
+                    stamp: {
+                        type: "stamp",
+                        params: {
+                            count: 0,
+                            maxCount: 10,
+                            locations: []
+
+                        }
+                    },
+                    createdAt: new Date(),
                 }],
             }
         },
         async loadUserList() {
             // it can be changed to fetch data from API
-            this.userList = JSON.parse(window.localStorage.getItem("userList")) || [];
+            this.userList = JSON.parse(window.localStorage.getItem("userList")) || this.defaultUserList;
         },
         async saveUserList() {
             // it can be changed to fetch data from API

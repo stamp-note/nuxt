@@ -4,8 +4,8 @@
       어드민 페이지 입니다.
     </div>
     <div class="absolute bottom-3 right-3 flex gap-2">
-      <NuxtPageAdminStatisticsBtn />
-      <NuxtPageAdminSettingBtn />
+<!--      <NuxtPageAdminStatisticsBtn />-->
+<!--      <NuxtPageAdminSettingBtn />-->
     </div>
   </div>
 </template>
