@@ -39,8 +39,8 @@ const selected = computed({
           <span
               class="ml-2"
           >
-          {{ selected.label }}
-        </span>
+            {{ selected.label }}
+          </span>
         </div>
       </template>
       <template #option="{option}">
@@ -52,9 +52,8 @@ const selected = computed({
           <span
               class="ml-2 whitespace-nowrap"
           >
-            
-        {{ option.label }}
-      </span>
+            {{ option.label }}
+          </span>
         </div>
       </template>
     </u-select-menu>
