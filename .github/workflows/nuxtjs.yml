@@ -44,6 +44,7 @@ jobs:
         run: |
           rm -rf .output/public/index.html
           mv .output/public/nuxt/* .output/public/
+          echo > .output/public/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
