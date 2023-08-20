@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {useMainViewStore} from "~/stores/mainView";
+import {useMainStore} from "./store";
 
-const store = useMainViewStore();
+const store = useMainStore();
 const options = computed(() => store.options)
 
 

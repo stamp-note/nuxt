@@ -21,6 +21,7 @@
     "nuxt-typed-router": "^3.2.5"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "broadcast-channel": "^5.1.0",
     "sass": "^1.63.6"
   }

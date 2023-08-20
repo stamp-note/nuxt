@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import {useMainStore} from "./store";
+
+const store = useMainStore();
+
+const view = computed(() => store.viewMode);
+</script>
 <template>
   <div class="h-full">
     <slot name="top-right">
@@ -25,10 +32,3 @@
 
   </div>
 </template>
-<script setup lang="ts">
-import {useMainViewStore} from "~/stores/mainView";
-
-const store = useMainViewStore();
-
-const view = computed(() => store.viewMode);
-</script>

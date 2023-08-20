@@ -1,7 +1,17 @@
+<script setup lang="ts">
+import {useCustomerStore} from "~/components/NuxtPage/Customer/store";
+
+const store = useCustomerStore();
+
+const view = computed(() => store.viewMode);
+</script>
 <template>
-  <div class="w-full h-full flex">
-    <div class="m-auto">
-      커스터머 페이지 입니다.
-    </div>
+  <div class="relative flex w-full h-full overflow-hidden">
+    <NuxtPageCustomerWelcomeView
+        v-if="view === 'welcome'"
+    />
+    <NuxtPageCustomerCouponView
+        v-else
+    />
   </div>
 </template>

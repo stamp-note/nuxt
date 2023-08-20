@@ -1,7 +1,7 @@
 import {defineStore} from "pinia";
 
-export const useMainViewStore = defineStore({
-    id: "mainView",
+export const useMainStore = defineStore({
+    id: "main",
     state: () => ({
         options: [
             {

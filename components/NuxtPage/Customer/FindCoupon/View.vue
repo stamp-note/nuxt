@@ -1,0 +1,9 @@
+<template>
+  <ModalLayoutDefault
+      hide-footer
+  >
+    <NuxtPageCustomerFindCouponTable
+        class="m-2"
+    />
+  </ModalLayoutDefault>
+</template>
