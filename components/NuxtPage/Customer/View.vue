@@ -7,11 +7,11 @@ const view = computed(() => store.viewMode);
 </script>
 <template>
   <div class="relative flex w-full h-full overflow-hidden">
-    <NuxtPageCustomerWelcomeView
-        v-if="view === 'welcome'"
-    />
-    <NuxtPageCustomerCouponDeskView
-        v-else
-    />
+<!--    <NuxtPageCustomerWelcomeView-->
+<!--        v-if="view === 'welcome'"-->
+<!--    />-->
+<!--    <NuxtPageCustomerCouponDeskView-->
+<!--        v-else-->
+<!--    />-->
   </div>
 </template>
