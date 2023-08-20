@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {useMainStore} from "./store";
+import {useMainStore} from "~/components/NuxtPage/store";
 
 const store = useMainStore();
 const options = computed(() => store.options)
