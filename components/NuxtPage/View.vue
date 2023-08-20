@@ -22,7 +22,7 @@ const view = computed(() => store.viewMode);
             v-if="view.startsWith('Customer')"
             class="flex-1 flex"
         >
-<!--            <NuxtPageCustomerView/>-->
+            <NuxtPageCustomerView/>
         </div>
         <div
             v-if="view.endsWith('Admin')"
