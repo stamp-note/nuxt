@@ -21,13 +21,13 @@ export const useMainStore = defineStore({
     actions: {
         setViewMode(mode:string) {
             this.viewMode = mode;
-            this.saveViewMode();
+            // this.saveViewMode();
         },
-        loadViewMode() {
-            this.viewMode = window.localStorage.getItem('viewMode') || 'Customer & Admin';
-        },
-        saveViewMode() {
-            window.localStorage.setItem('viewMode', this.viewMode);
-        }
+        // loadViewMode() {
+        //     this.viewMode = window.localStorage.getItem('viewMode') || 'Customer & Admin';
+        // },
+        // saveViewMode() {
+        //     window.localStorage.setItem('viewMode', this.viewMode);
+        // }
     },
 })
