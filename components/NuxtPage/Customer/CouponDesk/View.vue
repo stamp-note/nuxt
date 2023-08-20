@@ -53,7 +53,9 @@ const view = ref('init')
         </u-button>
       </div>
     </div>
-    <ContainerStampWrap v-else>
+    <ContainerStampWrap
+        v-else
+    >
       <div class="flex flex-col gap-5 p-20">
         <NuxtPageCustomerCouponDeskActiveCoupon/>
 

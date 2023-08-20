@@ -87,11 +87,11 @@ export const useUserCouponStore = defineStore({
         },
         async loadUserList() {
             // it can be changed to fetch data from API
-            this.userList = JSON.parse(window.localStorage.getItem("userCouponList")) || [];
+            this.userList = JSON.parse(window.localStorage.getItem("userList")) || [];
         },
         async saveUserList() {
             // it can be changed to fetch data from API
-            window.localStorage.setItem("userCouponList", JSON.stringify(this.userList));
+            window.localStorage.setItem("userList", JSON.stringify(this.userList));
         },
         async addUser(name, question, answer) {
             this.userList.push(this.makeUserObj(name, question, answer));
