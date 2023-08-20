@@ -28,7 +28,7 @@ const view = computed(() => store.viewMode);
             v-if="view.endsWith('Admin')"
             class="flex-1 flex"
         >
-            <NuxtPageAdminView/>
+<!--            <NuxtPageAdminView/>-->
         </div>
       </div>
     </slot>
