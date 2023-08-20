@@ -52,6 +52,7 @@ const selected = computed({
           <span
               class="ml-2 whitespace-nowrap"
           >
+            
         {{ option.label }}
       </span>
         </div>
