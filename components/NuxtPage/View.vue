@@ -12,7 +12,7 @@ const view = computed(() => store.viewMode);
   <div class="h-full">
     <slot name="top-right">
       <div class="absolute top-2 right-2 z-10 flex gap-2">
-<!--        <CommonThemeBtn/>-->
+        <CommonThemeBtn/>
 <!--        <NuxtPageViewSelect/>-->
       </div>
     </slot>
@@ -22,7 +22,7 @@ const view = computed(() => store.viewMode);
             v-if="view.startsWith('Customer')"
             class="flex-1 flex"
         >
-<!--            <NuxtPageCustomerView/>-->
+            <NuxtPageCustomerView/>
         </div>
         <div
             v-if="view.endsWith('Admin')"
