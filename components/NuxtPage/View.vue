@@ -3,7 +3,10 @@ import {useMainStore} from "./store";
 
 const store = useMainStore();
 
+store.loadViewMode();
 const view = computed(() => store.viewMode);
+
+
 </script>
 <template>
   <div class="h-full">

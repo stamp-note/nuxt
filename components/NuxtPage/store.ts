@@ -21,16 +21,13 @@ export const useMainStore = defineStore({
     actions: {
         setViewMode(mode:string) {
             this.viewMode = mode;
+            this.saveViewMode();
+        },
+        loadViewMode() {
+            this.viewMode = localStorage.getItem('viewMode') || 'Customer & Admin';
+        },
+        saveViewMode() {
+            localStorage.setItem('viewMode', this.viewMode);
         }
     },
-    persist: {
-        enabled: true,
-        storage: localStorage,
-        strategies: [
-            {
-                key: 'viewMode',
-                storage: localStorage,
-            },
-        ]
-    }
 })
