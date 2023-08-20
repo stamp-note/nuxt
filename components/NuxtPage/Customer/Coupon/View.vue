@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {useCustomerStore} from "~/components/NuxtPage/Customer/store";
+import {useCustomerStore} from "../store";
 
 const store = useCustomerStore();
 const onBackClick = () =>{
